@@ -2,7 +2,6 @@ package escobar.francisco.breakout;
 
 import java.util.Random;
 
-import acm.graphics.GRect;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -132,21 +131,21 @@ public class BreakoutApplication extends Application {
 		root.getChildren().add(ball);
 	}
 	
-	private Object getCollidingObject() {
-		if (getElementAt(ball.getCenterX(), ball.getCenterY()) != null && getElementAt(ball.getCenterX(), ball.getCenterY()) instanceof Rectangle)
-			return getElementAt(ball.getCenterX(), ball.getCenterY());
-		else if (getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY()) != null
-				&& getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY()) instanceof Rectangle)
-			return getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY());
-		else if (getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY() + BALL_RADIUS * 2) != null
-				&& getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY() + BALL_RADIUS * 2) instanceof Rectangle)
-			return getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY() + BALL_RADIUS * 2);
-		else if (getElementAt(ball.getCenterX(), ball.getCenterY() + BALL_RADIUS * 2) != null
-				&& getElementAt(ball.getCenterX(), ball.getCenterY() + BALL_RADIUS * 2) instanceof Rectangle)
-			return getElementAt(ball.getCenterX(), ball.getCenterY() + BALL_RADIUS * 2);
-		else
-			return null;
-	}
+//	private Object getCollidingObject() {
+//		if (getElementAt(ball.getCenterX(), ball.getCenterY()) != null && getElementAt(ball.getCenterX(), ball.getCenterY()) instanceof Rectangle)
+//			return getElementAt(ball.getCenterX(), ball.getCenterY());
+//		else if (getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY()) != null
+//				&& getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY()) instanceof Rectangle)
+//			return getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY());
+//		else if (getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY() + BALL_RADIUS * 2) != null
+//				&& getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY() + BALL_RADIUS * 2) instanceof Rectangle)
+//			return getElementAt(ball.getCenterX() + BALL_RADIUS * 2, ball.getCenterY() + BALL_RADIUS * 2);
+//		else if (getElementAt(ball.getCenterX(), ball.getCenterY() + BALL_RADIUS * 2) != null
+//				&& getElementAt(ball.getCenterX(), ball.getCenterY() + BALL_RADIUS * 2) instanceof Rectangle)
+//			return getElementAt(ball.getCenterX(), ball.getCenterY() + BALL_RADIUS * 2);
+//		else
+//			return null;
+//	}
 
 	public void createBricks() {
 		// make the bricks
